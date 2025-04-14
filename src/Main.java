@@ -1,8 +1,11 @@
+import challenges.CodeChallenge;
 import general.Person;
 import setFamily.CustomOrderTreeSet;
 import setFamily.CustomeOrderTreeMap;
 
+import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 import java.util.TreeMap;
 
 public class Main {
@@ -40,6 +43,18 @@ public class Main {
         treeMap.put("Charlie",2);
 
         System.out.println(treeMap);
+
+      /*
+          code Challenge
+         */
+
+        System.out.println(CodeChallenge.longestSubarrayWith2DistinctItemDiffOne(List.of(0,1,1,2,2,3)));
+
+         /*
+          code Challenge
+         */
+
+        CodeChallenge.canBeMadeSmallerBySwapping(Arrays.asList("java", "spring", "boot"));
 
     }
 }
