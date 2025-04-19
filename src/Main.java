@@ -62,5 +62,11 @@ public class Main {
         Integer[] distinctArray = Arrays.stream(array)
                 .distinct()
                 .toArray(Integer[]::new);
+
+        /*
+        isPalindrome :civic, noon, radar, madam
+         */
+        System.out.println(CodeChallenge.isPalindrome("hello"));
+        System.out.println(CodeChallenge.isPalindrome("civic"));
     }
 }

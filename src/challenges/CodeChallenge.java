@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.IntStream;
 
 public class CodeChallenge {
 
@@ -67,6 +68,15 @@ public class CodeChallenge {
 
             System.out.println("Word: " + word + " -> Can be made smaller by swapping? " + canBeSmaller);
         });
+
+    }
+
+    public static boolean isPalindrome(String input) {
+
+
+        String normalaized=input.toLowerCase();
+        return IntStream.range(0,normalaized.length()/2).allMatch(i-> normalaized.charAt(i)==normalaized.charAt(normalaized.length()-1-i));
+
 
     }
 }
