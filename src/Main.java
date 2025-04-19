@@ -39,8 +39,8 @@ public class Main {
 
         TreeMap treeMap=new TreeMap();
         treeMap.put("Alice",3);
-        treeMap.put("Bob",6);
-        treeMap.put("Charlie",2);
+        treeMap.put("Charlie",6);
+        treeMap.put("Bob",2);
 
         System.out.println(treeMap);
 
@@ -56,5 +56,11 @@ public class Main {
 
         CodeChallenge.canBeMadeSmallerBySwapping(Arrays.asList("java", "spring", "boot"));
 
+        Integer[] array = {1, 2, 2, 3, 4, 4, 5};
+
+        // Remove duplicates using streams and distinct()
+        Integer[] distinctArray = Arrays.stream(array)
+                .distinct()
+                .toArray(Integer[]::new);
     }
 }

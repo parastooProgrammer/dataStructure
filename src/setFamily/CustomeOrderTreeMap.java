@@ -5,7 +5,7 @@ import java.util.TreeMap;
 
 
 public class CustomeOrderTreeMap<T> {
-    TreeMap treeMap;
+    TreeMap<T, Integer> treeMap;
 
 
     public TreeMap getTreeMap() {
@@ -13,7 +13,7 @@ public class CustomeOrderTreeMap<T> {
     }
 
     public void setTreeMap(Comparator<T> customComparator) {
-        this.treeMap = new TreeMap(customComparator);
+        this.treeMap = new TreeMap<>(customComparator);
     }
 
     public CustomeOrderTreeMap(Comparator<T> customComparator) {
