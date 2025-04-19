@@ -79,4 +79,10 @@ public class CodeChallenge {
 
 
     }
+
+    public static boolean isPalindromeByBuilder(String input) {
+        String normalized = input.toLowerCase();
+        StringBuilder reversed = new StringBuilder(normalized).reverse();
+        return normalized.equals(reversed.toString());
+    }
 }
