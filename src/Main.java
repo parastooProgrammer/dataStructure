@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.TreeMap;
+import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
@@ -68,5 +69,12 @@ public class Main {
          */
         System.out.println(CodeChallenge.isPalindrome("hello"));
         System.out.println(CodeChallenge.isPalindrome("civic"));
+
+        /*
+        twoNum :[2,7,11,15] , 9
+         */
+        int[] result=CodeChallenge.twoSum(new int[]{2,7,11,15},9);
+        IntStream.of(result).forEach(System.out::println);
+
     }
 }
