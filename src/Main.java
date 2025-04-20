@@ -3,10 +3,7 @@ import general.Person;
 import setFamily.CustomOrderTreeSet;
 import setFamily.CustomeOrderTreeMap;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.stream.IntStream;
 
 public class Main {
@@ -73,8 +70,14 @@ public class Main {
         /*
         twoNum :[2,7,11,15] , 9
          */
-        int[] result=CodeChallenge.twoSum(new int[]{2,7,11,15},9);
-        IntStream.of(result).forEach(System.out::println);
+        int[] resultTwoNum=CodeChallenge.twoSum(new int[]{2,7,11,15},9);
+        IntStream.of(resultTwoNum).forEach(System.out::println);
+       /*
+        Add Two Numbers
+         */
 
+        LinkedList<Integer> resultAdd=
+                CodeChallenge.addTwoNumbers(new LinkedList<>(Arrays.asList(2, 4, 3)),new LinkedList<>(Arrays.asList(5,6,4)));
+        resultAdd.forEach(System.out::print);
     }
 }

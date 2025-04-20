@@ -1,9 +1,8 @@
 package challenges;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class CodeChallenge {
@@ -85,13 +84,7 @@ public class CodeChallenge {
         StringBuilder reversed = new StringBuilder(normalized).reverse();
         return normalized.equals(reversed.toString());
     }
- /*
- does this question has any better solution than two for loops in java 7,8 or upper?Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-You can return the answer in any order.
-  */
     public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> numsMap = new HashMap<>();
         int[] result = new int[2];
@@ -108,5 +101,28 @@ You can return the answer in any order.
 
         }
         throw new IllegalArgumentException("No two sum solution");
+    }
+
+    public static LinkedList<Integer> addTwoNumbers(LinkedList<Integer> l1, LinkedList<Integer> l2) {
+
+
+        String l1ST=l1.stream().map(String::valueOf).collect(Collectors.joining());
+        String l2ST=l2.stream().map(String::valueOf).collect(Collectors.joining());
+
+        StringBuilder l1STR=new StringBuilder(l1ST);
+        StringBuilder l2STR=new StringBuilder(l2ST);
+
+        Integer result=Integer.valueOf(l1STR.reverse().toString())+Integer.valueOf(l2STR.reverse().toString());
+        StringBuilder resultSTR=new StringBuilder(result.toString());
+
+
+        LinkedList<Integer> list = resultSTR.reverse().toString().chars()  // IntStream of character codes
+                .mapToObj(c -> Character.getNumericValue(c)) // convert char to int
+                .collect(Collectors.toCollection(LinkedList::new));
+
+        return list;
+
+
+
     }
 }
