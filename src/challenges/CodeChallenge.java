@@ -125,4 +125,25 @@ public class CodeChallenge {
 
 
     }
+    public static int lengthOfLongestSubstring(String s) {
+
+
+        return 0;
+
+    }
+
+    public static Character firstNonRepeatingCharacter(String input){
+        Optional<Character> ret;
+        Map<Character , Integer> inputMap=new LinkedHashMap<>();
+        input.chars().mapToObj(c -> (char) c) .forEach(ch-> inputMap.put(ch, inputMap.getOrDefault(ch, 0)+1));
+
+        ret = inputMap.keySet().stream()
+                .filter(c -> inputMap.get(c) .equals(1))
+                .findFirst();
+
+
+
+      return ret.orElse(' ');
+
+    }
 }

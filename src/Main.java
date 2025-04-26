@@ -78,6 +78,17 @@ public class Main {
 
         LinkedList<Integer> resultAdd=
                 CodeChallenge.addTwoNumbers(new LinkedList<>(Arrays.asList(2, 4, 3)),new LinkedList<>(Arrays.asList(5,6,4)));
-        resultAdd.forEach(System.out::print);
+        resultAdd.forEach(System.out::println);
+        /*
+        lengthOfLongestSubstring : abcabcbb, bbbbb, pwwkew
+        the answer must be a substring, "pwke" is a subsequence and not a substring
+         */
+        System.out.println(CodeChallenge.lengthOfLongestSubstring("pwwkew"));
+
+        /*
+        find the first non-repeating character in a string.
+            (Example: "swiss" ? returns 'w' because 's' repeats but 'w' doesn't.)
+         */
+        System.out.println(CodeChallenge.firstNonRepeatingCharacter("swiss"));
     }
 }
