@@ -66,6 +66,7 @@ public class Main {
          */
         System.out.println(CodeChallenge.isPalindrome("hello"));
         System.out.println(CodeChallenge.isPalindrome("civic"));
+        System.out.println(CodeChallenge.isPalindromeByBuilder("$A man, a plan, a canal: Panama$"));
 
         /*
         twoNum :[2,7,11,15] , 9

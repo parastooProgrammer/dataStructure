@@ -80,7 +80,11 @@ public class CodeChallenge {
     }
 
     public static boolean isPalindromeByBuilder(String input) {
+        input=input.trim();
+
+        input = input.replaceAll("[^a-zA-Z0-9$]", "");
         String normalized = input.toLowerCase();
+
         StringBuilder reversed = new StringBuilder(normalized).reverse();
         return normalized.equals(reversed.toString());
     }
@@ -144,6 +148,16 @@ public class CodeChallenge {
 
 
       return ret.orElse(' ');
+
+    }
+
+    public static Character firstRepeatingTwiceCharacter(String input){
+        Optional<Character> ret;
+        Set<Character> seen=new HashSet<>();
+
+        ret=input.chars().mapToObj(c -> (char) c).filter(ch->!seen.add(ch)).findFirst();
+
+        return ret.orElse(' ');
 
     }
 }
